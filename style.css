@@ -1,13 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: "Gabarito", sans-serif
 }
 
-.navbar{
+.navbar {
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -20,11 +20,11 @@ body{
     z-index: 1;
 }
 
-.navbar__s1__title{
-    color: rgb(164,53,240);
+.navbar__s1__title {
+    color: rgb(164, 53, 240);
 }
 
-.navbar__s2{
+.navbar__s2 {
     padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
@@ -34,7 +34,7 @@ body{
     align-items: center;
 }
 
-.navbar__s2 input{
+.navbar__s2 input {
     border: none;
     width: 100%;
     font-size: 16px;
@@ -42,22 +42,22 @@ body{
 
 }
 
-.navbar__s2 input:focus{
+.navbar__s2 input:focus {
     outline: none;
 }
 
-.navbar__s3{
+.navbar__s3 {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.My-learning{
+.My-learning {
     position: relative;
     cursor: pointer;
 }
 
-.My-learning__popup{
+.My-learning__popup {
     position: absolute;
     border: solid black 1px;
     background-color: white;
@@ -67,11 +67,12 @@ body{
     right: 0;
     display: none;
 }
-.My-learning:hover .My-learning__popup{
+
+.My-learning:hover .My-learning__popup {
     display: block;
 }
 
-.categories{
+.categories {
     display: flex;
     gap: 20px;
     justify-content: space-around;
@@ -80,97 +81,125 @@ body{
     padding: 10px;
 }
 
-.categories p{
-   background-color: rgb(164,53,240);
+.categories p {
+    background-color: rgb(164, 53, 240);
     color: white;
     border-radius: 30px;
     padding: 10px;
+    cursor: pointer;
+     border: solid rgb(164,53,241) 2px;
+}
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid rgb(164,53,241) 2px;
 }
 
-.sale-image img{
+.sale-image img {
     width: 100%;
     position: relative;
 
 }
-.sale-image__offer{
-   width: 35%;
-   border: solid black 2px;
-   padding: 10px;
-   position: absolute;
+
+.sale-image__offer {
+    width: 35%;
+    border: solid black 2px;
+    padding: 10px;
+    position: absolute;
     top: 20%;
     left: 20px;
     background-color: white;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 
 
 }
-.recomended{
+@keyframes zoom{
+    0%{
+       transform:scale(0); 
+       opacity: 0; 
+    }
+
+
+    100%{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+
+.recomended {
     padding: 10px;
 }
 
-.recomended__container{
+.recomended__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top:10px ;
+    margin-top: 10px;
 }
 
 
 
-.course-card{
-    width:250px;
+.course-card {
+    width: 250px;
 }
 
-.course-card img{
+.course-card img {
     width: 100%;
     height: 50%;
 }
 
-.topics{
+.topics {
     padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     gap: 10px;
-    margin-top:10px ;
+    margin-top: 10px;
     flex-wrap: wrap;
 
 }
 
-.topics__container p{
+.topics__container p {
     border: solid grey 2px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
 }
-.popular{
+
+.popular {
     padding: 10px;
 }
 
-.popular__container{
+.popular__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top:10px ;
+    margin-top: 10px;
 }
 
-.footer{
+.footer {
     padding: 30px;
     background-color: black;
     color: white;
 }
 
-.footer__one{
+.footer__one {
     display: flex;
     gap: 10px;
 }
-.footer__one p{
+
+.footer__one p {
     margin: 20px;
 }
 
-.footer__two{
+.footer__two {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     gap: 10px;
     margin: 20px;
     align-items: center;
